@@ -38,8 +38,8 @@ Else
 if (count=2){
 	line.="(" count ")"
 }Else if (StrLen(text)=1){
-	if ((state.CapsLock=0&&state.Shift=0)||(state.capslock&&state.shift))
-		StringLower,text,text
+	if ((state.CapsLock && !state.Shift) || (!state.capslock && state.shift))
+		StringUpper,text,text
 	line.=text
 }Else if (StrLen(text)>1)
 line.=" " text " "
