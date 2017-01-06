@@ -37,11 +37,11 @@ Else
 	count:=1
 if (count=2){
 	line.="(" count ")"
-}Else if (StrLen(text)=1){
-	if ((state.CapsLock && !state.Shift) || (!state.capslock && state.shift))
+}Else if(StrLen(text)=1){
+	if ((state.CapsLock&&!state.Shift)||(!state.capslock&&state.shift))
 		StringUpper,text,text
 	line.=text
-}Else if (StrLen(text)>1)
+}Else if(StrLen(text)>1)
 line.=" " text " "
 if (count>2){
 	line:=SubStr(line,1,InStr(line,"(",0,0,1)-1)
